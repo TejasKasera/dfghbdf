@@ -1,0 +1,65 @@
+<html  lang="en" dir="ltr">
+   <head>
+    
+    <meta charset="utf-8">
+    <title>Amazing Quiz App</title>
+    <script type = "text/javascript" src = "main.js"></script>
+    <link rel="stylesheet" href="style.css" >
+
+    <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["fname"].value;
+          var y = document.forms["tejas"]["email"].value;
+          if (x == "" || y == "") {
+            alert("Name or Email must be filled out");
+            return false;
+          }
+        }
+        </script>
+
+        <style>
+          input::placeholder{
+            color: rgb(27, 142, 236);
+            font-size: 20px;
+          }
+
+          
+        </style>
+
+</head>
+<body>
+
+  <div class = "hero" > 
+  <div class = "bubbles">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+     <img src = "bubble.png">
+  </div>
+  </div> 
+
+  <div>
+    <!-- @TODO validation-->
+<form id = "contactForm" class = "box" name="myForm"  onsubmit="return validateForm()" method="post">
+  
+    <h1>Fulfill Your Dreams... </h1>
+    <input type="text" name="fname" placeholder="Name" id="name">
+    <input type="submit" value="take a tour">
+</form>
+
+
+
+<form  class = "box1" name="tejas"  onsubmit="return validateForm()" method="post">
+    <input type="text" name="email" placeholder="Email" id="email">
+    
+</form>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>
+</body>
+</html>
+
